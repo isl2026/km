@@ -18,17 +18,17 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
 
-header{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:400;box-shadow:0 1px 8px rgba(50,120,160,.07)}
+header{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:400;box-shadow:0 1px 8px rgba(50,120,160,.07)}
 .logo-area{display:flex;align-items:center;gap:10px}
 .logo-area img{height:30px;object-fit:contain}
 .logo-sep{width:1px;height:20px;background:var(--bor)}
 .logo-label{font-size:11px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 
-nav{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 28px;display:flex;align-items:center;gap:2px;position:sticky;top:56px;z-index:300;overflow-x:auto}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 32px;display:flex;align-items:center;gap:2px;position:sticky;top:56px;z-index:300;overflow-x:auto}
 .nb{padding:0 16px;height:44px;border:none;background:none;cursor:pointer;font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;color:var(--mut);border-bottom:3px solid transparent;transition:all .2s;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .nb:hover{color:var(--txt)}.nb.active{color:var(--gd);border-bottom-color:var(--g1)}
 
-.wrap{max-width:1140px;margin:0 auto;padding:26px 18px 72px}
+.wrap{max-width:100%;padding:26px 28px 72px}
 
 .hero{background:linear-gradient(145deg,#5a9640,#6BB5D6 60%,#3a8db5);border-radius:18px;padding:22px 28px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
@@ -89,8 +89,8 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 28px;disp
 .btn-main{width:100%;padding:11px;background:var(--grad);color:#fff;border:none;border-radius:10px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 3px 12px rgba(107,181,214,.26)}
 .btn-main:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(107,181,214,.36)}
 .btn-main:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.btn-stop{padding:11px 18px;background:var(--red);color:#fff;border:none;border-radius:10px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;white-space:nowrap;box-shadow:0 3px 10px rgba(192,57,43,.25);display:none}
-.btn-stop:hover{background:#a93226}.btn-stop:disabled{opacity:.6;cursor:not-allowed}
+.btn-stop{padding:11px 18px;background:#1a6b3a;color:#fff;border:2px solid #7BBD5E;border-radius:10px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;white-space:nowrap;box-shadow:0 3px 14px rgba(26,107,58,.35);display:none}
+.btn-stop:hover{background:#145230;box-shadow:0 5px 18px rgba(26,107,58,.45)}.btn-stop:disabled{opacity:.6;cursor:not-allowed}
 .btn-row{display:flex;gap:10px;margin-top:14px}
 .btn-out{background:#fff;color:var(--bd);border:1.5px solid var(--bor);border-radius:9px;padding:7px 14px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
 .btn-out:hover{border-color:var(--g2)}
@@ -104,13 +104,13 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);padding:0 28px;disp
 .preview-box.show{display:block}
 
 /* Base correction panel */
-.base-panel{background:#fffbeb;border:1.5px solid #fde68a;border-radius:12px;padding:16px 18px;margin-bottom:16px;display:none}
+.base-panel{background:linear-gradient(135deg,rgba(123,189,94,.07),rgba(107,181,214,.07));border:1.5px solid var(--g2);border-radius:12px;padding:16px 18px;margin-bottom:16px;display:none}
 .base-panel.show{display:block;animation:fadeUp .3s}
-.base-panel h4{font-size:13px;font-weight:800;color:#92400e;margin-bottom:10px;display:flex;align-items:center;gap:7px}
-.base-item{display:grid;grid-template-columns:1fr 1fr 32px;gap:8px;align-items:center;margin-bottom:8px;padding:8px 10px;background:#fff;border-radius:8px;border:1px solid #fde68a}
-.base-item label{font-size:11px;font-weight:700;color:#92400e}
-.base-item input{border:1.5px solid #fde68a;border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Nunito',sans-serif;font-weight:600;color:var(--txt);background:#fffbeb;outline:none;transition:border .2s}
-.base-item input:focus{border-color:var(--ora);background:#fff}
+.base-panel h4{font-size:13px;font-weight:800;color:var(--gd);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.base-item{display:grid;grid-template-columns:1fr 1fr 32px;gap:8px;align-items:center;margin-bottom:8px;padding:8px 10px;background:#fff;border-radius:8px;border:1px solid var(--bor)}
+.base-item label{font-size:11px;font-weight:700;color:var(--bd)}
+.base-item input{border:1.5px solid var(--bor);border-radius:7px;padding:7px 10px;font-size:12px;font-family:'Nunito',sans-serif;font-weight:600;color:var(--txt);background:var(--sur2);outline:none;transition:border .2s}
+.base-item input:focus{border-color:var(--g2);background:#fff;box-shadow:0 0 0 3px rgba(107,181,214,.12)}
 .base-item .bi-ok{font-size:16px;text-align:center}
 
 /* Results */
@@ -161,7 +161,7 @@ tr.rok:hover{background:#f0fdf6}tr.rwa:hover{background:#fffbeb}tr.rer:hover{bac
 
 @media(max-width:640px){
   header{padding:0 14px}nav{padding:0 10px}
-  .wrap{padding:16px 12px 60px}
+  .wrap{padding:16px 14px 60px}
   .addr-row{grid-template-columns:1fr}.arrow-mid{display:none}
   .grid2{grid-template-columns:1fr}
   .hero{padding:18px 16px}.hero-txt h1{font-size:16px}
@@ -258,11 +258,11 @@ tr.rok:hover{background:#f0fdf6}tr.rwa:hover{background:#fffbeb}tr.rer:hover{bac
         <!-- Base correction panel collapsible -->
         <div class="base-panel" id="basePanel">
           <div onclick="toggleBase()" style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none">
-            <h4 style="margin-bottom:0">⚠️ Verificá las ciudades base antes de procesar</h4>
-            <span id="baseToggleIcon" style="font-size:18px;color:#92400e;font-weight:800;transition:transform .25s">▼</span>
+            <h4 style="margin-bottom:0">📍 Verificá las ciudades base antes de procesar</h4>
+            <span id="baseToggleIcon" style="font-size:18px;color:var(--gd);font-weight:800;transition:transform .25s">▼</span>
           </div>
           <div id="baseContent" style="display:none;margin-top:10px">
-            <p style="font-size:12px;color:#92400e;margin-bottom:10px;font-weight:600">Revisá que los nombres sean correctos para que Google Maps los encuentre bien. Podés corregirlos acá:</p>
+            <p style="font-size:12px;color:var(--bd);margin-bottom:10px;font-weight:600">Revisá que los nombres sean correctos para que Google Maps los encuentre bien. Podés corregirlos acá:</p>
             <div id="baseItems"></div>
           </div>
         </div>
