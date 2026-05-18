@@ -484,8 +484,8 @@ function processFile(file){
       let dr=rows;
       if(rows.length>0){const f0=String(rows[0][0]).toLowerCase();if(f0.includes('fecha')||f0.includes('sinies'))dr=rows.slice(1);}
       rawData=dr.filter(r=>r[4]||r[6]).map((r,i)=>{
-        const kmRaw=String(r[8]||'').trim().replace(/\s+/g,' ').toUpperCase();
-        const baseArt=String(r[9]||'').trim().replace(/\s+/g,' ').toUpperCase();
+        const kmRaw=String(r[8]||'').trim().replace(/^['"`]+/, '').trim().replace(/\s+/g,' ').toUpperCase();
+        const baseArt=String(r[9]||'').trim().replace(/^['"`]+/, '').trim().replace(/\s+/g,' ').toUpperCase();
         // NEGATIVO puede estar en columna KM o en columna BASE ART
         const isNegativo=kmRaw==='NEGATIVO'||baseArt==='NEGATIVO';
         // Si es negativo, KM se muestra como NEGATIVO; si no, usamos el valor original
