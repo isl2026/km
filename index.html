@@ -586,7 +586,10 @@ async function startAudit(){
       const kmAudit=(kmG<MIN_KM?MIN_KM:kmG)+kmBase;
 
       let status,diff;
-      if(isMin){
+      if(isNeg){
+        // NEGATIVO: móvil llegó pero paciente canceló → siempre conforme
+        diff=0;status='ok';cOk++;cNeg++;
+      }else if(isMin){
         // Prestador declaró MÍNIMO — verificar que Google también sea menor al mínimo
         diff=kmTotal-(kmG<MIN_KM?MIN_KM:kmTotal);
         if(kmG<MIN_KM&&!hasBase){status='ok';cOk++;}
