@@ -604,7 +604,7 @@ async function startAudit(){
         }
       }
 
-      auditResults.push({...row,origin,dest,kmGoogle:kmG,kmBase,kmTotal,kmAudit,duration:r.duration,status,diff,isMin,hasBase,baseErr,baseName});
+      auditResults.push({...row,origin,dest,kmGoogle:kmG,kmBase,kmTotal,kmAudit,duration:r.duration,status,diff,isMin,isNeg,hasBase,baseErr,baseName});
     }catch(e){
       auditResults.push({...row,origin,dest,kmGoogle:null,kmBase:0,kmTotal:null,kmAudit:null,duration:'-',status:'error',diff:null,isMin:false,isNeg:false,hasBase,baseErr:false,baseName:''});
     }
