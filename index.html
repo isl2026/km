@@ -662,7 +662,7 @@ function renderAudit(filter){
     const kmA=r.kmAudit!==null?`<span class="kv ka">${r.kmAudit.toFixed(1)} km</span>`:`-`;
     let dH='-';
     if(r.diff!==null){const s=r.diff>0?'+':'';const dc=r.status==='ok'?'dok':r.status==='warn'?'dwa':'der';dH=`<span class="dv ${dc}">${s}${r.diff.toFixed(1)} km</span>`;}
-    const badge=r.isNeg?`<span class="badge" style="background:rgba(180,83,9,.12);color:#b45309">🚫 Negativo</span>`:r.status==='ok'?`<span class="badge bok">✓ Conforme</span>`:r.status==='warn'?`<span class="badge bwa">⚠ Leve</span>`:r.status==='err'?`<span class="badge ber">✗ Alta</span>`:`<span class="badge bnd">Sin datos</span>`;
+    const badge=r.isNeg?`<span class="badge bok">✓ Conforme</span>`:r.status==='ok'?`<span class="badge bok">✓ Conforme</span>`:r.status==='warn'?`<span class="badge bwa">⚠ Leve</span>`:r.status==='err'?`<span class="badge ber">✗ Alta</span>`:`<span class="badge bnd">Sin datos</span>`;
     const baseCell=r.hasBase?`<span style="font-size:11px;font-weight:700;color:var(--pur)">${r.base}</span>`:`<span class="tm">—</span>`;
     return `<tr class="${rc}"><td class="tm">${r.idx}</td><td style="font-size:11px;white-space:nowrap;font-weight:600">${r.fecha}</td><td class="tm">${r.siniestro}</td><td class="tn">${r.pasajero}</td><td class="te" title="${r.dirOrig}">${r.dirOrig}</td><td class="ta" title="${r.origin}">${r.origin}</td><td class="ta" title="${r.dest}">${r.dest}</td><td>${baseCell}</td><td>${kmP}</td><td>${kmB}</td><td>${kmG}</td><td>${kmT}</td><td>${kmA}</td><td>${dH}</td><td>${badge}</td></tr>`;
   }).join('');
