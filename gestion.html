@@ -499,9 +499,24 @@ function mostrarLogin(){
 
 async function iniciarApp(usr){
   usuario=usr;
-  const {data}=await db.from('perfiles').select('*').eq('id',usr.id).single();
+  // Try to get profile, if not found create it
+  let {data,error}=await db.from('perfiles').select('*').eq('id',usr.id).single();
+  if(!data){
+    // Profile doesn't exist yet, create it
+    const {data:newP}=await db.from('perfiles').insert([{
+      id:usr.id,
+      nombre_completo:usr.user_metadata?.nombre_completo||usr.email,
+      email:usr.email,
+      rol:usr.user_metadata?.rol||'admin'
+    }]).select().single();
+    data=newP;
+  }
   perfil=data;
-  if(!perfil||!perfil.activo){await db.auth.signOut();return;}
+  if(!perfil){
+    document.getElementById('loginErr').textContent='❌ Error al cargar el perfil. Contactá al administrador.';
+    document.getElementById('loginErr').classList.add('show');
+    await db.auth.signOut();return;
+  }
   document.getElementById('loginScreen').style.display='none';
   document.getElementById('appScreen').style.display='block';
   document.getElementById('userNombre').textContent=perfil.nombre_completo;
