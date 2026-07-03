@@ -19,12 +19,12 @@ body::before{content:'';position:absolute;inset:0;background:radial-gradient(ell
 
 /* LOGO AREA */
 .logo-area{text-align:center;margin-bottom:48px}
-.logo-area img{height:48px;object-fit:contain;filter:brightness(0) invert(1);opacity:.9}
-.logo-area .tagline{font-size:13px;color:rgba(255,255,255,.45);font-weight:600;margin-top:10px;letter-spacing:1px;text-transform:uppercase}
+.logo-area img{height:58px;object-fit:contain;filter:none;opacity:1}
+.logo-area .tagline{font-size:15px;color:rgba(255,255,255,.55);font-weight:600;margin-top:12px;letter-spacing:1px;text-transform:uppercase}
 
 /* TITLE */
-.portal-title{font-size:13px;font-weight:800;color:rgba(161,190,80,.8);text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:10px}
-.portal-sub{font-size:28px;font-weight:900;color:#fff;text-align:center;margin-bottom:48px;letter-spacing:-.3px}
+.portal-title{font-size:15px;font-weight:800;color:rgba(161,190,80,.9);text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:12px}
+.portal-sub{font-size:34px;font-weight:900;color:#fff;text-align:center;margin-bottom:48px;letter-spacing:-.3px}
 
 /* CARDS */
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%}
@@ -48,11 +48,11 @@ body::before{content:'';position:absolute;inset:0;background:radial-gradient(ell
 .sys-card:hover::before{opacity:1}
 
 .card-icon{font-size:36px;margin-bottom:18px;display:block}
-.card-tag{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}
+.card-tag{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
 .sys-card.green .card-tag{color:rgba(161,190,80,.8)}
 .sys-card.blue .card-tag{color:rgba(158,195,231,.8)}
-.card-title{font-size:20px;font-weight:900;color:#fff;margin-bottom:10px}
-.card-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;font-weight:500;flex:1}
+.card-title{font-size:24px;font-weight:900;color:#fff;margin-bottom:12px}
+.card-desc{font-size:15px;color:rgba(255,255,255,.6);line-height:1.7;font-weight:500;flex:1}
 .card-arrow{
   display:inline-flex;align-items:center;gap:6px;
   font-size:12px;font-weight:800;margin-top:20px;
@@ -63,13 +63,13 @@ body::before{content:'';position:absolute;inset:0;background:radial-gradient(ell
 .sys-card:hover .card-arrow{transform:translateX(4px)}
 
 .card-features{margin-top:16px;display:flex;flex-direction:column;gap:6px}
-.cf{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.4);font-weight:600}
+.cf{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.5);font-weight:600}
 .cf::before{content:'·';font-size:16px;font-weight:900}
 .sys-card.green .cf::before{color:rgba(161,190,80,.5)}
 .sys-card.blue .cf::before{color:rgba(158,195,231,.5)}
 
 /* FOOTER */
-.portal-footer{margin-top:40px;font-size:11px;color:rgba(255,255,255,.2);text-align:center;font-weight:600;letter-spacing:.5px}
+.portal-footer{margin-top:40px;font-size:13px;color:rgba(255,255,255,.3);text-align:center;font-weight:600;letter-spacing:.5px}
 
 @media(max-width:640px){
   .cards{grid-template-columns:1fr}
